@@ -61,6 +61,9 @@ export function InputForm() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
+        <div>
+          <p>Enter your first and last name </p>
+        </div>
         <FormField
           control={form.control}
           name="prenom"
@@ -89,6 +92,9 @@ export function InputForm() {
             </FormItem>
           )}
         />
+        <div>
+          <p>Or enter your age</p>
+        </div>
         <FormField
           control={form.control}
           name="age"

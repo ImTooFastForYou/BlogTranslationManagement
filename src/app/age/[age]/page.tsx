@@ -22,6 +22,7 @@ export default async function Page({ params }: { params: { age: string } }) {
   if (user != false) {
     return (
       <div className="">
+        <h1 className="text-2xl">Liste des personnes de {params.age} ans</h1>
         <ul>
           {user.map((name, index) => (
             <li key={index}>
@@ -40,5 +41,5 @@ export default async function Page({ params }: { params: { age: string } }) {
       </div>
     );
   }
-  return <div className="text-4xl"> No user of that age </div>;
+  return <div className="text-4xl"> Aucune personne de cet âge </div>;
 }

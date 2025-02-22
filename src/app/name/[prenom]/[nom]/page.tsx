@@ -28,7 +28,9 @@ export default async function Page({
     return (
       <Card>
         <CardHeader>
-          <CardTitle>Enter the age</CardTitle>
+          <CardTitle>
+            Entrez l&apos;âge de {params.prenom} {params.nom}
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <form action="/api/name" method="post">
@@ -55,7 +57,7 @@ export default async function Page({
     return (
       <Card>
         <CardHeader>
-          <CardTitle>This person&apos;s age is {age}</CardTitle>
+          <CardTitle>L&apos;âge de cette personne est {age} ans</CardTitle>
         </CardHeader>
         <CardContent>
           <div>

@@ -62,18 +62,18 @@ export function InputNameForm() {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
         <div>
-          <p>Enter your first and last name </p>
+          <p>Entrez un prénom et un nom </p>
         </div>
         <FormField
           control={form.control}
           name="prenom"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Prenom</FormLabel>
+              <FormLabel>Prénom</FormLabel>
               <FormControl>
-                <Input placeholder="Enter prenom" {...field} />
+                <Input placeholder="Entrez un prénom" {...field} />
               </FormControl>
-              <FormDescription>This is your first name.</FormDescription>
+              <FormDescription>Ceci est le prénom.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -85,15 +85,15 @@ export function InputNameForm() {
             <FormItem>
               <FormLabel>Nom</FormLabel>
               <FormControl>
-                <Input placeholder="Enter nom" {...field} />
+                <Input placeholder="Entrez un nom" {...field} />
               </FormControl>
-              <FormDescription>This is your last name.</FormDescription>
+              <FormDescription>Ceci est le nom.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
         <div>
-          <p>Or enter your age</p>
+          <p>Ou entrez un âge</p>
         </div>
         <FormField
           control={form.control}
@@ -102,9 +102,9 @@ export function InputNameForm() {
             <FormItem>
               <FormLabel>Age</FormLabel>
               <FormControl>
-                <Input placeholder="Enter age" {...field} />
+                <Input placeholder="Entrez un âge" {...field} />
               </FormControl>
-              <FormDescription>This is your age.</FormDescription>
+              <FormDescription>Ceci est l&apos;âge.</FormDescription>
               <FormMessage />
             </FormItem>
           )}

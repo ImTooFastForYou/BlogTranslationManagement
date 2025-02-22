@@ -24,7 +24,7 @@ const FormSchema = z.object({
   age: z.string(),
 });
 
-export function InputForm() {
+export function InputNameForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {

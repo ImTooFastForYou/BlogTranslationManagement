@@ -12,6 +12,7 @@ datasource db {
 
 model name {
   id Int @id @default(autoincrement())
-  prenom String?
-  nom String?
+  prenom String
+  nom String
+  age String
 }

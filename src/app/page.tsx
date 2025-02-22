@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { InputForm } from "@/components/input-form-front-page";
+import { InputNameForm } from "@/components/input-form-front-page";
 
 export default function Page() {
   return (
@@ -14,7 +14,7 @@ export default function Page() {
           <CardTitle>Entrez un prénom et un nom</CardTitle>
         </CardHeader>
         <CardContent>
-          <InputForm />
+          <InputNameForm />
         </CardContent>
       </Card>
     </ThemeProvider>

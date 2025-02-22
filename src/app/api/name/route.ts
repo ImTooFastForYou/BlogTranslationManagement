@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
 
 export async function GET() {
   return NextResponse.json({ ok: true, env: process.env.NODE_ENV });
@@ -7,10 +8,19 @@ export async function GET() {
 export async function POST(request: NextRequest) {
   const formData = await request.formData();
 
+  const prenom = formData.get("prenom");
+  const nom = formData.get("nom");
+  const age = formData.get("age");
+
+  if (!prenom || !nom || !age) {
+    return NextResponse.json({ error: "Missing fields" }, { status: 400 });
+  }
+
   const newName = await prisma.name.create({
     data: {
-      prenom: String(formData.get("prenom")),
-      nom: String(formData.get("nom")),
+      prenom: String(prenom),
+      nom: String(nom),
+      age: String(age),
     },
   });
 

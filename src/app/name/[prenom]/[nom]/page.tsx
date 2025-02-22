@@ -55,7 +55,7 @@ export default async function Page({
     return (
       <Card>
         <CardHeader>
-          <CardTitle>The age is {age}</CardTitle>
+          <CardTitle>This person&apos;s age is {age}</CardTitle>
         </CardHeader>
         <CardContent>
           <div>

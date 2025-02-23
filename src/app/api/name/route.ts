@@ -1,10 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
-export async function GET() {
-  return NextResponse.json({ ok: true, env: process.env.NODE_ENV });
-}
-
 export async function POST(request: NextRequest) {
   const formData = await request.formData();
 
@@ -24,5 +20,5 @@ export async function POST(request: NextRequest) {
     },
   });
 
-  return NextResponse.json({ name: newName });
+  return NextResponse.redirect(new URL("/", request.url));
 }

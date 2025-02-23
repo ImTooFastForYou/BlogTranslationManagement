@@ -47,10 +47,18 @@ export function InputNameForm() {
       ),
     });
 
-    if (data.nom && data.prenom && !data.age) {
-      router.push(`/name/${data.prenom}/${data.nom}`);
-    } else if (!data.nom && !data.prenom && data.age) {
-      router.push(`/age/${data.age}`);
+    const prenom =
+      data.prenom.slice(0, 1).toUpperCase() +
+      data.prenom.substring(1, data.prenom.length).toLowerCase();
+    const nom =
+      data.nom.slice(0, 1).toUpperCase() +
+      data.nom.substring(1, data.nom.length).toLowerCase();
+    const age = data.age;
+
+    if (nom && prenom && !age) {
+      router.push(`/name/${prenom}/${nom}`);
+    } else if (!nom && !prenom && age) {
+      router.push(`/age/${age}`);
     } else {
       toast({
         title: "You must fill in all fields.",
